@@ -1,6 +1,6 @@
 version: 1
 config:
-  target: "http://10.110.12.21:3000"
+  target: "http://{{$processEnvironment.SERVER}}:3000"
   http:
     pool: 10
   phases:
@@ -11,6 +11,6 @@ scenarios:
   - flow:
       - post:
           url: "/polls/leaderboard/list"
-          json:
-            organizationId": "6911691355886452736"
-            eventId": "644"
+          body:
+            organizationId: "6911691355886452736"
+            eventId: "644"
