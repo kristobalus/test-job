@@ -1,0 +1,29 @@
+{
+  "name": "test-mongodb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "init": "ts-node init.ts",
+    "query": "ts-node query.ts",
+    "server": "ts-node server.ts",
+    "client": "ts-node client.ts",
+    "test": "artillery run ./artillery/scenario.yaml"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/mongodb": "^4.0.7",
+    "@types/node": "^18.11.17",
+    "@types/restify": "^8.5.5",
+    "artillery": "^1.7.9",
+    "artillery-plugin-expect": "^1.5.0",
+    "axios": "^1.2.1",
+    "mongodb": "^4.13.0",
+    "pg": "^8.8.0",
+    "restify": "^10.0.0",
+    "restify-logger": "^2.0.1",
+    "ts-node": "^10.9.1",
+    "typeorm": "^0.2.45"
+  }
+}
