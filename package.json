@@ -19,7 +19,6 @@
     "artillery": "^1.7.9",
     "artillery-plugin-expect": "^1.5.0",
     "axios": "^1.2.1",
-    "mongodb": "^4.13.0",
     "pg": "^8.8.0",
     "restify": "^10.0.0",
     "restify-logger": "^2.0.1",
