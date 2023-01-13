@@ -1,18 +1,15 @@
 {
-  "iteration_count": 120000,
-  "debug" : false,
-  "load_type": "linear",
-  "duration": 60,
-  "output": "stdout",
+  "request_count": 1,
+  "duration": 1,
   "steps": [
     {
       "id": 1,
-      "url": "https://10.110.12.4:3000/polls/list",
+      "url": "http://10.110.12.4:3000/polls/list",
       "method": "POST",
       "headers": {
         "Content-Type": "application/json",
       },
-      "payload": "./list-payload.json"
+      "payload_file": "./list-payload.json"
     }
   ]
 }
