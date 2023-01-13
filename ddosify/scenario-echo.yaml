@@ -1,0 +1,18 @@
+{
+  "iteration_count": 100000,
+  "debug" : false,
+  "load_type": "linear",
+  "duration": 60,
+  "output": "stdout",
+  "steps": [
+    {
+      "id": 1,
+      "url": "https://test_site1.com/polls/list",
+      "method": "POST",
+      "headers": {
+        "Content-Type": "application/json",
+      },
+      "payload": "{\"organizationId\": \"6911691355886452736\",\"eventId\": \"644\"}"
+    }
+  ]
+}
