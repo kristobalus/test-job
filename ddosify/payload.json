@@ -1,4 +1,8 @@
 {
   "organizationId": "6911691355886452736",
-  "eventId": "644"
+  "eventId": "644",
+  "pagination": {
+    "page": 1,
+    "pageSize": 20
+  }
 }
