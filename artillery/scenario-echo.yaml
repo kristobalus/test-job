@@ -2,10 +2,10 @@ version: 1
 config:
   target: "http://{{ $processEnvironment.HOST }}:3000"
   http:
-    pool: 10
+    pool: 100
   phases:
     - duration: 60
-      arrivalRate: 2500
+      arrivalCount: 180000
   processor: "./processor.js"
 scenarios:
   - flow:
