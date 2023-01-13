@@ -4,7 +4,7 @@
   "steps": [
     {
       "id": 1,
-      "url": "http://10.110.12.4:3000/polls/leaderboard.echo",
+      "url": "http://$HOST:3000/polls/leaderboard.echo",
       "method": "POST",
       "headers": { "Content-Type": "application/json" },
       "payload_file": "./payload.json"
