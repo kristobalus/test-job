@@ -12,7 +12,7 @@ module.exports = {
         return done();
     },
     generateRandomPagination(requestParams, context, ee, next) {
-        context.vars.pageSize = Math.max(Math.ceil(Math.random() * 100), 20);
+        context.vars.pageSize = 20;
         context.vars.page = Math.ceil(Math.random() * 100);
         return next();
     }
