@@ -6,9 +6,7 @@
       "id": 1,
       "url": "http://10.110.12.4:3000/polls/list",
       "method": "POST",
-      "headers": {
-        "Content-Type": "application/json",
-      },
+      "headers": { "Content-Type": "application/json" },
       "payload_file": "./list-payload.json"
     }
   ]
