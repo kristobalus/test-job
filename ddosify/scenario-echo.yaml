@@ -1,6 +1,6 @@
 {
-  "request_count": 500000,
-  "duration": 120,
+  "request_count": $COUNT,
+  "duration": $DURATION,
   "steps": [
     {
       "id": 1,
