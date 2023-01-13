@@ -1,0 +1,13 @@
+{
+  "request_count": $COUNT,
+  "duration": $DURATION,
+  "steps": [
+    {
+      "id": 1,
+      "url": "http://$HOST:3000/polls/leaderboard.listjs",
+      "method": "POST",
+      "headers": { "Content-Type": "application/json" },
+      "payload_file": "./payload.json"
+    }
+  ]
+}
