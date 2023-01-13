@@ -1,6 +1,6 @@
 {
-  "request_count": 1,
-  "duration": 1,
+  "request_count": 120000,
+  "duration": 60,
   "steps": [
     {
       "id": 1,
