@@ -1,6 +1,6 @@
 version: 1
 config:
-  target: "http://localhost:3000"
+  target: "http://{{ $processEnvironment.HOST }}:3000"
   http:
     pool: 10
   phases:
