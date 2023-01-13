@@ -4,8 +4,8 @@ config:
   http:
     pool: 100
   phases:
-    - duration: {{ $processEnvironment.DURATION }}
-      arrivalCount: {{ $processEnvironment.COUNT }}
+    - duration: 60
+      arrivalCount: 90000
   processor: "./processor.js"
 scenarios:
   - flow:
