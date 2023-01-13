@@ -1,5 +1,5 @@
 {
-  "iteration_count": 100000,
+  "iteration_count": 120000,
   "debug" : false,
   "load_type": "linear",
   "duration": 60,
@@ -7,7 +7,7 @@
   "steps": [
     {
       "id": 1,
-      "url": "https://test_site1.com/polls/list",
+      "url": "https://10.110.12.4:3000/polls/list",
       "method": "POST",
       "headers": {
         "Content-Type": "application/json",
