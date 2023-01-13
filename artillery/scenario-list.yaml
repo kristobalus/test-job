@@ -1,0 +1,16 @@
+version: 1
+config:
+  target: "http://localhost:3000"
+  http:
+    pool: 10
+  phases:
+    - duration: 60
+      arrivalRate: 1500
+  processor: "./processor.js"
+scenarios:
+  - flow:
+      - post:
+          url: "/polls/leaderboard/list"
+          json:
+            organizationId: "6911691355886452736"
+            eventId: "644"
