@@ -12,10 +12,7 @@
       "headers": {
         "Content-Type": "application/json",
       },
-      "payload": {
-        "organizationId": "6911691355886452736",
-        "eventId": "644"
-      }
+      "payload": "./list-payload.json"
     }
   ]
 }
