@@ -5,7 +5,7 @@ config:
     pool: 100
   phases:
     - duration: 60
-      arrivalCount: 90000
+      arrivalCount: 120000
   processor: "./processor.js"
 scenarios:
   - flow:

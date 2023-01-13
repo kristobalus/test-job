@@ -14,6 +14,7 @@ module.exports = {
     generateRandomPagination(requestParams, context, ee, next) {
         context.vars.pageSize = Math.ceil(Math.random() * 100);
         context.vars.page = Math.ceil(Math.random() * 100);
+        console.log(`pagination ${context.vars.page}, ${context.vars.pageSize}`)
         return next();
     }
 };
