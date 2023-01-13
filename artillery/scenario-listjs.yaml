@@ -14,4 +14,7 @@ scenarios:
           json:
             organizationId: "6911691355886452736"
             eventId: "644"
+            pagination:
+              page: "{{ page }}"
+              pageSize: "{{ pageSize }}"
           beforeRequest: "generateRandomPagination"
