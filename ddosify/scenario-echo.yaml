@@ -1,6 +1,7 @@
 {
   "request_count": $COUNT,
   "duration": $DURATION,
+  "load_type": "linear",
   "steps": [
     {
       "id": 1,
