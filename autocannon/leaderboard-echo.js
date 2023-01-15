@@ -3,8 +3,8 @@ const autocannon = require('autocannon')
 
 const instance = autocannon({
     url: `http://${process.env.HOST}:3000`,
-    amount: 240000,
     duration: 60,
+    warmup: true,
     requests: [
         {
             title: "leaderboard.echo",
