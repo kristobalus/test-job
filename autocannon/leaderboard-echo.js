@@ -16,9 +16,11 @@ const instance = autocannon({
             })
         }
     ]
-}, function finishedBench (err, res) {
+}, console.log)
+
+function finishedBench (err, res) {
     console.log('finished bench', err, res)
-})
+}
 
 // this is used to kill the instance on CTRL-C
 process.once('SIGINT', () => {
@@ -26,6 +28,6 @@ process.once('SIGINT', () => {
 })
 
 // just render results
-autocannon.track(instance, {renderProgressBar: true})
+autocannon.track(instance, {renderProgressBar: true, renderResultsTable: true})
 
 console.log(`benchmarking started...`)
