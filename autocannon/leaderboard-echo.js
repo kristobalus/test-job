@@ -26,4 +26,6 @@ process.once('SIGINT', () => {
 })
 
 // just render results
-autocannon.track(instance, {renderProgressBar: false})
+autocannon.track(instance, {renderProgressBar: true})
+
+console.log(`benchmarking started...`)
