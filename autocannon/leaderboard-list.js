@@ -1,13 +1,14 @@
 
 const autocannon = require('autocannon')
 
-autocannon({
+const instance = autocannon({
     url: `http://${process.env.HOST}:3000/polls/leaderboard/list`,
-    amount: 60000,
     duration: 60,
+    warmup: true,
     requests: [
         {
             method: 'POST',
+            title: "leaderboard.list",
             path: '/polls/leaderboard.list',
             setupRequest: (req, context) => {
                 req.body = JSON.stringify({
@@ -22,4 +23,18 @@ autocannon({
             }
         }
     ]
-}, console.log)
+})
+
+function finishedBench (err, res) {
+    // console.log('finished bench', err, res)
+}
+
+// this is used to kill the instance on CTRL-C
+process.once('SIGINT', () => {
+    instance.stop()
+})
+
+// just render results
+autocannon.track(instance, {renderProgressBar: true, renderResultsTable: true})
+
+console.log(`benchmarking started...`)
