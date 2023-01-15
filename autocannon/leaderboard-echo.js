@@ -1,7 +1,7 @@
 
 const autocannon = require('autocannon')
 
-autocannon({
+const instance = autocannon({
     url: `http://${process.env.HOST}:3000/polls/leaderboard/echo`,
     amount: 240000,
     duration: 60,
@@ -16,3 +16,11 @@ autocannon({
         }
     ]
 }, console.log)
+
+// this is used to kill the instance on CTRL-C
+process.once('SIGINT', () => {
+    instance.stop()
+})
+
+// just render results
+autocannon.track(instance, {renderProgressBar: false})
