@@ -2,7 +2,7 @@
 const autocannon = require('autocannon')
 
 autocannon({
-    url: `http://${HOST}:3000/polls/leaderboard/echo`,
+    url: `http://${process.env.HOST}:3000/polls/leaderboard/echo`,
     amount: 240000,
     duration: 60,
     requests: [
