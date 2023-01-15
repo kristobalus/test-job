@@ -9,7 +9,7 @@ const instance = autocannon({
         {
             title: "leaderboard.listjs",
             method: 'POST',
-            path: '/polls/leaderboard.listjs',
+            path: '/polls/leaderboard/listjs',
             setupRequest: (req, context) => {
                 req.body = JSON.stringify({
                     "organizationId": "6911691355886452736",

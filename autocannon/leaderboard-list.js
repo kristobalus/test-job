@@ -2,14 +2,14 @@
 const autocannon = require('autocannon')
 
 const instance = autocannon({
-    url: `http://${process.env.HOST}:3000/polls/leaderboard/list`,
+    url: `http://${process.env.HOST}:3000`,
     duration: 60,
     warmup: true,
     requests: [
         {
             method: 'POST',
             title: "leaderboard.list",
-            path: '/polls/leaderboard.list',
+            path: '/polls/leaderboard/list',
             setupRequest: (req, context) => {
                 req.body = JSON.stringify({
                     "organizationId": "6911691355886452736",
@@ -23,7 +23,7 @@ const instance = autocannon({
             }
         }
     ]
-})
+}, finishedBench)
 
 function finishedBench (err, res) {
     // console.log('finished bench', err, res)
