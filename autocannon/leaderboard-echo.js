@@ -16,7 +16,7 @@ const instance = autocannon({
             })
         }
     ]
-}, console.log)
+})
 
 function finishedBench (err, res) {
     console.log('finished bench', err, res)
