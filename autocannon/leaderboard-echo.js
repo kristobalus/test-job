@@ -16,10 +16,10 @@ const instance = autocannon({
             })
         }
     ]
-})
+}, finishedBench)
 
 function finishedBench (err, res) {
-    console.log('finished bench', err, res)
+    // console.log('finished bench', err, res)
 }
 
 // this is used to kill the instance on CTRL-C
