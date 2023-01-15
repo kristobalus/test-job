@@ -18,7 +18,7 @@
     "@types/mongodb": "^4.0.7",
     "@types/node": "^18.11.17",
     "@types/restify": "^8.5.5",
-    "artillery": "^1.7.9",
+    "artillery": "^2.0.0-27",
     "artillery-plugin-expect": "^1.5.0",
     "autocannon": "^7.10.0",
     "axios": "^1.2.1",
