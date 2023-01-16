@@ -10,7 +10,8 @@
     "client": "ts-node client.ts",
     "test:list": "artillery run ./artillery/scenario-list.yaml",
     "test:listjs": "artillery run ./artillery/scenario-listjs.yaml",
-    "test:echo": "artillery run ./artillery/scenario-echo.yaml"
+    "test:echo": "artillery run ./artillery/scenario-echo.yaml",
+    "test:typeorm": "ts-node typeorm/typeorm-test.ts"
   },
   "author": "",
   "license": "ISC",

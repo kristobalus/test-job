@@ -1,5 +1,5 @@
 import { ConnectionOptions, createConnections, getConnection } from 'typeorm'
-import { Moderation } from './entities/moderation'
+import { Moderation } from '../entities/moderation'
 
 (async () => {
 
