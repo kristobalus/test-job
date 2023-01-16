@@ -4,6 +4,7 @@ const autocannon = require('autocannon')
 const instance = autocannon({
     url: `http://${process.env.HOST}:3000`,
     duration: 180,
+    connections: 100,
     warmup: true,
     requests: [
         {
