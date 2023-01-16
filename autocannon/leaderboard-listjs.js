@@ -13,7 +13,7 @@ const instance = autocannon({
             setupRequest: (req, context) => {
                 req.body = JSON.stringify({
                     "organizationId": "6911691355886452736",
-                    "eventId": "644",
+                    "eventId": 644,
                     "pagination": {
                         "page": Math.floor(Math.random() * 500),
                         "pageSize": 20

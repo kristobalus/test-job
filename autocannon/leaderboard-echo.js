@@ -12,7 +12,7 @@ const instance = autocannon({
             path: '/polls/leaderboard/echo',
             body: JSON.stringify({
                 "organizationId": "6911691355886452736",
-                "eventId": "644"
+                "eventId": 644
             })
         }
     ]
