@@ -14,8 +14,8 @@ const client = new Client({
 
     await client.connect()
     const time = Date.now()
-    const eventId = process.env.EVENT_ID || 644
-    const orgId = process.env.ORG_ID || 6911691355886452736
+    const eventId = process.env.EVENT_ID || "644"
+    const orgId = process.env.ORG_ID || "6911691355886452736"
     const count = 100_000
     for (let i = 0; i < count; i++) {
         const result = await client.query(
