@@ -18,9 +18,11 @@ const client = new Client({
     const orgId = process.env.ORG_ID || 6911691355886452736
     const count = 100_000
     for (let i = 0; i < count; i++) {
-        const { rows: [ row ] } = await client.query(
+        const result = await client.query(
             'select * from moderation where organization_id = $1 and event_id = $2',
             [ orgId, eventId ])
+        const { rows: [ row ] } = result
+        console.log(result, row)
     }
     console.log('millis per select', (Date.now() - time) / count)
     process.exit(0)
