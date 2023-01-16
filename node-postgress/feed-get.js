@@ -22,8 +22,6 @@ const client = new Client({
             `select * from moderation where organization_id = $1 and event_id = $2`,
             [ orgId, eventId ])
         const { rows: [ row ] } = result
-        console.log(result, row)
-        break
     }
     console.log('millis per select', (Date.now() - time) / count)
     process.exit(0)
