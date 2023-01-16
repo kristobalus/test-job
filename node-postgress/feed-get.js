@@ -23,4 +23,5 @@ const client = new Client({
             [ orgId, eventId ])
     }
     console.log('millis per select', (Date.now() - time) / count)
+    process.exit(0)
 })().catch(err => console.log(err))
