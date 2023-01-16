@@ -19,7 +19,7 @@ const client = new Client({
     const count = 100_000
     for (let i = 0; i < count; i++) {
         const result = await client.query(
-            'select * from moderation where organization_id = $1 and event_id = $2',
+            `select * from moderation where organization_id = $1 and event_id = $2`,
             [ orgId, eventId ])
         const { rows: [ row ] } = result
         console.log(result, row)
