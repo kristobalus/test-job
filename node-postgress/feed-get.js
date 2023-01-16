@@ -23,6 +23,7 @@ const client = new Client({
             [ orgId, eventId ])
         const { rows: [ row ] } = result
         console.log(result, row)
+        break
     }
     console.log('millis per select', (Date.now() - time) / count)
     process.exit(0)
