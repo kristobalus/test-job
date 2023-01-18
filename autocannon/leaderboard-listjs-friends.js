@@ -25,7 +25,7 @@ const instance = autocannon({
                 return req
             },
             onResponse: (status, body, context, headers) => {
-                console.log(status, body, context, headers)
+                // console.log(status, body, context, headers)
             }
         }
     ]
