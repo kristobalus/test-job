@@ -17,11 +17,13 @@ const instance = autocannon({
             method: 'POST',
             path: '/polls/leaderboard/listjs',
             setupRequest: (req, context) => {
+                const start = process.env.RANDOM_OFFSET ? Math.floor(Math.random() * (users.length / 2)) : 0
+                const end = process.env.USERS ?? 50
+                const friends = users.slice(start, end)
                 req.body = JSON.stringify({
                     "organizationId": "6911691355886452736",
                     "eventId": 644,
-                    "usersIds": users.slice(process.env.RANDOM_OFFSET ? Math.floor(Math.random() * (users.length / 2)) : 0,
-                        process.env.USERS ?? 50).map(user => user.Id)
+                    "usersIds": friends.map(user => user.Id)
                 })
                 return req
             },
