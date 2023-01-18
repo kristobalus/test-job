@@ -17,7 +17,8 @@ const instance = autocannon({
                     "pagination": {
                         "page": Math.floor(Math.random() * 500),
                         "pageSize": 20
-                    }
+                    },
+                    "lookupUser": false
                 })
                 return req
             }
