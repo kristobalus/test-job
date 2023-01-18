@@ -21,7 +21,6 @@ const instance = autocannon({
                 const start = Math.floor(Math.random() * (users.length - length))
                 const end = start + length
                 const friends = users.slice(start, end)
-                console.log(start, end)
                 req.body = JSON.stringify({
                     "organizationId": "6911691355886452736",
                     "eventId": 644,
