@@ -6,9 +6,6 @@ const fs = require('fs');
  * @type {[*]}
  */
 const users = require("../data/test-users.json");
-const start = process.env.RANDOM_OFFSET ? Math.floor(Math.random() * (users.length / 2)) : 0
-const end = start + parseInt(process.env.USERS) ?? 50
-const friends = users.slice(start, end)
 
 const instance = autocannon({
     url: `http://${process.env.HOST}:3000`,
@@ -21,6 +18,9 @@ const instance = autocannon({
             method: 'POST',
             path: '/polls/leaderboard/listjs',
             setupRequest: (req, context) => {
+                const start = process.env.RANDOM_OFFSET ? Math.floor(Math.random() * (users.length / 2)) : 0
+                const end = start + parseInt(process.env.USERS) ?? 50
+                const friends = users.slice(start, end)
                 req.body = JSON.stringify({
                     "organizationId": "6911691355886452736",
                     "eventId": 644,
