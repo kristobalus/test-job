@@ -20,7 +20,8 @@ const instance = autocannon({
                 req.body = JSON.stringify({
                     "organizationId": "6911691355886452736",
                     "eventId": 644,
-                    "usersIds": users.slice(0, process.env.USERS ?? 50).map(user => user.Id)
+                    "usersIds": users.slice(process.env.RANDOM_OFFSET ? Math.floor(Math.random() * (users.length / 2)) : 0,
+                        process.env.USERS ?? 50).map(user => user.Id)
                 })
                 return req
             },
