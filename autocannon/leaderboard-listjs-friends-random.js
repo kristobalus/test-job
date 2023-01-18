@@ -8,7 +8,7 @@ const users = require("../data/test-users.json");
 
 const instance = autocannon({
     url: `http://${process.env.HOST}:3000`,
-    duration: process.env.DURATION ? parseInt(process.env.DURATION) :  60,
+    duration: 60,
     warmup: true,
     // maxOverallRequests: process.env.COUNT ? parseInt(process.env.COUNT) : undefined,
     requests: [
@@ -17,7 +17,7 @@ const instance = autocannon({
             method: 'POST',
             path: '/polls/leaderboard/listjs',
             setupRequest: (req, context) => {
-                const start = 0
+                const start = Math.floor(Math.random() * (users.length / 2))
                 const end = start + process.env.USERS ? parseInt(process.env.USERS) : 50
                 const friends = users.slice(start, end)
                 req.body = JSON.stringify({
