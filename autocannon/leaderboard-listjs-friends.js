@@ -11,6 +11,7 @@ const instance = autocannon({
     url: `http://${process.env.HOST}:3000`,
     duration: process.env.DURATION ?? 60,
     warmup: true,
+    maxOverallRequests: process.env.COUNT ?? undefined,
     requests: [
         {
             title: "leaderboard.listjs",
@@ -28,7 +29,7 @@ const instance = autocannon({
                 return req
             },
             onResponse: (status, body, context, headers) => {
-                // console.log(status, body, context, headers)
+                console.log(status, body, context, headers)
             }
         }
     ]
