@@ -9,7 +9,7 @@ const users = require("../data/test-users.json");
 
 const instance = autocannon({
     url: `http://${process.env.HOST}:3000`,
-    duration: 60,
+    duration: process.env.DURATION ?? 60,
     warmup: true,
     requests: [
         {
@@ -24,8 +24,8 @@ const instance = autocannon({
                 })
                 return req
             },
-            onResponse: (req, context) => {
-
+            onResponse: (status, body, context, headers) => {
+                console.log(status, body, context, headers)
             }
         }
     ]
