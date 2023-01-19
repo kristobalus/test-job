@@ -15,7 +15,7 @@ const instance = autocannon({
         {
             title: "leaderboard.listjs",
             method: 'POST',
-            path: '/polls/leaderboard/listjs',
+            path: `/${ process.env.PREFIX ?? "polls" }/leaderboard/listjs`,
             setupRequest: (req, context) => {
                 const start = 0
                 const end = start + process.env.USERS ? parseInt(process.env.USERS) : 50
