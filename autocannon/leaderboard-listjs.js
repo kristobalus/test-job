@@ -16,7 +16,7 @@ const instance = autocannon({
                     "eventId": 644,
                     "pagination": {
                         "page": Math.floor(Math.random() * 500),
-                        "pageSize": 20
+                        "pageSize": process.env.PAGE_SIZE ? parseInt(process.env.PAGE_SIZE) : 20
                     }
                 })
                 return req
