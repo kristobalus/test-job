@@ -9,14 +9,14 @@ const length = process.env.USERS ? parseInt(process.env.USERS) : 50
 
 const instance = autocannon({
     url: `http://${process.env.HOST}:3000`,
-    duration: 60,
+    duration: process.env.DURATION ? parseInt(process.env.DURATION) : 60,
     warmup: true,
     // maxOverallRequests: process.env.COUNT ? parseInt(process.env.COUNT) : undefined,
     requests: [
         {
             title: "leaderboard.listjs",
             method: 'POST',
-            path: '/polls/leaderboard/listjs',
+            path: `/${ process.env.PREFIX ?? 'polls' }/leaderboard/listjs`,
             setupRequest: (req, context) => {
                 const start = Math.floor(Math.random() * (users.length - length))
                 const end = start + length
