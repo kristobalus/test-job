@@ -5,8 +5,7 @@ const instance = autocannon({
     url: `http://${process.env.HOST}:3000`,
     duration: process.env.DURATION ? parseInt(process.env.DURATION) : 60,
     connections: process.env.CONNECTIONS ? parseInt(process.env.CONNECTIONS) : 10,
-    pipelining: process.env.PIPELINING ? parseInt(process.env.PIPELINING) : 1,
-    workers: 2,
+    pipelining: process.env.PIPELINING ? parseInt(process.env.PIPELINING) : 50,
     warmup: true,
     requests: [
         {
