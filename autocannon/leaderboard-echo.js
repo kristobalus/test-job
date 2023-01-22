@@ -7,6 +7,7 @@ const instance = autocannon({
     connections: process.env.CONNECTIONS ? parseInt(process.env.CONNECTIONS) : 10,
     pipelining: process.env.PIPELINING ? parseInt(process.env.PIPELINING) : 10,
     warmup: true,
+    renderStatusCodes: true,
     requests: [
         {
             title: "leaderboard.echo",
