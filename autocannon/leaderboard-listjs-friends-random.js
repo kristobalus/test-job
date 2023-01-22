@@ -13,6 +13,7 @@ const instance = autocannon({
     url: `http://${process.env.HOST}:3000`,
     duration: process.env.DURATION ? parseInt(process.env.DURATION) : 60,
     warmup: true,
+    pipelining: 100,
     // maxOverallRequests: process.env.COUNT ? parseInt(process.env.COUNT) : undefined,
     requests: [
         {
