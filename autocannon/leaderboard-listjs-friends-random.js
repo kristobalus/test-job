@@ -7,6 +7,8 @@ const autocannon = require('autocannon');
 const users = require("../data/test-users.json");
 const length = process.env.USERS ? parseInt(process.env.USERS) : 50
 
+console.log(`users in list`, length)
+
 const instance = autocannon({
     url: `http://${process.env.HOST}:3000`,
     duration: process.env.DURATION ? parseInt(process.env.DURATION) : 60,
