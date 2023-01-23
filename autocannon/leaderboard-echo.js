@@ -16,10 +16,7 @@ const instance = autocannon({
             body: JSON.stringify({
                 "organizationId": "6911691355886452736",
                 "eventId": 644
-            }),
-            onResponse: (status, body, context, headers) => {
-                console.log(status, body)
-            }
+            })
         }
     ]
 }, finishedBench)
