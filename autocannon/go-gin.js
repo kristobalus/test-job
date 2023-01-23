@@ -3,7 +3,7 @@ const autocannon = require('autocannon')
 const qs = require('querystring')
 
 const instance = autocannon({
-    url: `http://localhost:8080`,
+    url: process.env.HOST ?? `http://localhost:8080`,
     duration: 60,
     connections: 20,
     pipelining: 50,
