@@ -5,8 +5,8 @@ const qs = require('querystring')
 const instance = autocannon({
     url: `http://${process.env.HOST}:8080` ?? `http://localhost:8080`,
     duration: 60,
-    connections: 20,
-    pipelining: 50,
+    connections: 1,
+    pipelining: 1,
     warmup: true,
     renderStatusCodes: true,
     requests: [
