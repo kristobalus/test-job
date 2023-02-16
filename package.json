@@ -17,17 +17,20 @@
   "license": "ISC",
   "dependencies": {
     "@types/mongodb": "^4.0.7",
-    "@types/node": "^18.11.17",
     "@types/restify": "^8.5.5",
     "artillery": "^2.0.0-27",
     "artillery-plugin-expect": "^1.5.0",
     "autocannon": "^7.10.0",
     "axios": "^1.2.1",
+    "ioredis": "5.3.0",
     "object-hash": "^3.0.0",
     "pg": "^8.8.0",
     "restify": "^10.0.0",
     "restify-logger": "^2.0.1",
     "ts-node": "^10.9.1",
-    "typeorm": "^0.2.45"
+    "typeorm": "^0.3.11"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.18"
   }
 }
