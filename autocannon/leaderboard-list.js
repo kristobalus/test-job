@@ -3,9 +3,9 @@ const autocannon = require('autocannon')
 
 const instance = autocannon({
     url: `http://${process.env.HOST ?? "localhost:3000"}`,
-    duration: process.env.DURATION ? parseInt(process.env.DURATION) : 10,
+    duration: process.env.DURATION ? parseInt(process.env.DURATION) : 60,
     amount: process.env.AMOUNT ? parseInt(process.env.AMOUNT) : undefined,
-    connections: process.env.CONNECTIONS ? parseInt(process.env.CONNECTIONS) : 10,
+    connections: process.env.CONNECTIONS ? parseInt(process.env.CONNECTIONS) : 30,
     pipelining: process.env.PIPELINING ? parseInt(process.env.PIPELINING) : 200,
     warmup: true,
     requests: [
