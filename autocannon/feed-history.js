@@ -2,18 +2,28 @@
 const autocannon = require('autocannon')
 
 const instance = autocannon({
-    url: `http://${process.env.HOST}:3000`,
-    duration: 60,
+    url: `http://${process.env.HOST ?? "localhost:3000"}`,
+    duration: process.env.DURATION ? parseInt(process.env.DURATION) : 60,
+    amount: process.env.AMOUNT ? parseInt(process.env.AMOUNT) : undefined,
+    connections: process.env.CONNECTIONS ? parseInt(process.env.CONNECTIONS) : 10,
+    pipelining: process.env.PIPELINING ? parseInt(process.env.PIPELINING) : 5,
     warmup: true,
     requests: [
         {
             method: 'POST',
-            title: "feed.get",
-            path: '/polls/feed/get',
+            title: "feed.history",
+            path: '/polls/feed/history',
             setupRequest: (req, context) => {
                 req.body = JSON.stringify({
                     "organizationId": "6911691355886452736",
-                    "eventId": 644
+                    "eventId": "644",        
+                    "userId": "6772240274761449472",
+                    "deviceId": "B5EAC246-A58F-4F50-97D5-CB4A15B141E9",
+                    "questionType": [ "1" ] ,
+                    "pagination": {
+                        "page": 0,
+                        "pageSize": 20
+                    }
                 })
                 return req
             }
