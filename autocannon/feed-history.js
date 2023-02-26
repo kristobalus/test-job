@@ -2,7 +2,7 @@
 const autocannon = require('autocannon')
 
 const instance = autocannon({
-    url: `http://${process.env.HOST ?? "localhost:3000"}`,
+    url: `http://${process.env.HOST ?? "poll-service.load-tests.svc.cluster.local"}`,
     duration: process.env.DURATION ? parseInt(process.env.DURATION) : 60,
     amount: process.env.AMOUNT ? parseInt(process.env.AMOUNT) : undefined,
     connections: process.env.CONNECTIONS ? parseInt(process.env.CONNECTIONS) : 10,
